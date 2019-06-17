@@ -18,24 +18,22 @@ def get_filters():
     print('\n\nHello! Let\'s explore some US bikeshare data! Make sure all your entries begin with a capital letter.')
 
     while True:
-        city = input(str('\nWhich city would you like to see data on?\n'
+        city = (input(str('\nWhich city would you like to see data on?\n').title()
         'New York City, Chicago, or Washington?\n '))
-        city=city.title()
         if city in ('Washington', 'Chicago', 'New york city'):
             break
         else:
             print('\n\n City not found. Please try again.\n')
 
     while True:
-        month = input(str('\nWould you like to search by one of the following months?\nJanuary, February, March, April, May, June, or all?\n '))
+        month = (input(str('\nWould you like to search by one of the following months?\nJanuary, February, March, April, May, June, or all?\n '))).title()
         month=month.title()
         if month in months:
             break
         else:
             print ('Invalid month. Please try again.\n')
     while True:
-        day = input(str('\nWould you like to search by one of the following days?\nSunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or all of them?\n' ))
-        day=day.title()
+        day = (input(str('\nWould you like to search by one of the following days?\nSunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or all of them?\n' ))).title()
         if day in days:
             break
         else:
